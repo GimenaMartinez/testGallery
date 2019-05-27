@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="stylesheet" href="/src/app/photos-detail/photos-detail.component.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="title-detail-photo display-4">Detalle de Imagen {{photo.id}}</h1>
+          </div>
+        </div>
+  </header>
+
+<div *ngIf="photo" class="card-detail" style="width: 18rem;">
+    <img class="card-img-top" src="{{photo.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{photo.title}}</h5>
+      <p class="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
+     
+    </div>
+</div>
+
+

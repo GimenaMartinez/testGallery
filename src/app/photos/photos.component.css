@@ -1,0 +1,35 @@
+.galery{
+  height: auto;
+  text-align: center;
+  margin-top: 10%;
+}
+.pagination-control {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#image-gallery .modal-footer{
+  display: block;
+}
+img{
+  cursor: pointer;
+  border-radius: 9px;
+  border-color: black;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+  .img-fluid{
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+  } 
+  .masthead {
+    height: 50vh;
+    min-height: 300px;
+    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+ 

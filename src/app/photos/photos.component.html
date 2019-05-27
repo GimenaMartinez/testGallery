@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="stylesheet" href="./photos.component.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="font-weight-light">Galeria de Imagenes</h1>
+          <p class="lead">Disfruta las nuevas imagenes</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div *ngIf="errorValue" class="alert alert alert-danger" role="alert">
+    Necesitas permisos para continuar <a href="/login" class="alert-link">Loguearme.</a>. Give it a click if you like.
+  </div>
+  <div class="galery">
+    <a (click)="open(content,photo.url,photo.title)" (dblclick)="method2CallForDblClick(photo.id)"
+      *ngFor="let photo of photos | paginate: {itemsPerPage: 5, currentPage: p}">
+      <img src={{photo.thumbnailUrl}}></a>
+  </div>
+  <div class="pagination-control">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+  <ng-template #content let-c="close" let-d="dismiss" class="modal">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{title}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <img src={{name}} class="img-fluid" alt="Responsive image">
+    </div>
+  </ng-template>
+</body>
+</html>

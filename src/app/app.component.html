@@ -1,0 +1,14 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple">
+ <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div *ngIf="errorValue" class="alert alert alert-danger" role="alert">
+        No estas logeado <a href="/login" class="alert-link">Loguearme.</a>. Give it a click if you like.
+      </div>
+<router-outlet></router-outlet>
+
+<app-navbar></app-navbar>
+
