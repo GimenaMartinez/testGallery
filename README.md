@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+In this project use test API:
+
+https://jsonplaceholder.typicode.com
+
+Functionality:
+
+-Login with valid e-mail from: https://jsonplaceholder.typicode.com/users
+-View Images from: https://jsonplaceholder.typicode.com/photos
+-The expiration session is included when the user is inactive for 60 seconds.
+-Only users logged can watch the more information of image.
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

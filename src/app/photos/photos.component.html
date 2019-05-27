@@ -8,6 +8,9 @@
   <title>Document</title>
 </head>
 <body>
+    <div *ngIf="errorValue" class="alert-no-logeado  alert alert alert-danger" role="alert">
+        Necesitas logearte para acceder <a href="/login" class="alert-link">Loguearme.</a>
+      </div>
   <header class="masthead">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
@@ -18,9 +21,7 @@
       </div>
     </div>
   </header>
-  <div *ngIf="errorValue" class="alert alert alert-danger" role="alert">
-    Necesitas permisos para continuar <a href="/login" class="alert-link">Loguearme.</a>. Give it a click if you like.
-  </div>
+ 
   <div class="galery">
     <a (click)="open(content,photo.url,photo.title)" (dblclick)="method2CallForDblClick(photo.id)"
       *ngFor="let photo of photos | paginate: {itemsPerPage: 5, currentPage: p}">

@@ -18,11 +18,12 @@
 </head>
 
 <body>
+  
   <div class="login-block">
+      <div *ngIf="warningSession" class="expiracion-login  alert alert alert-warning" role="alert">
+          Tu sesion ha expirado, por favor, logeate nuevamente <a href="/login" class="alert-link">Loguearme</a>
+        </div>
     <div class="container">
-        <div *ngIf="warningSession" class="alert alert alert-danger" role="alert">
-            Necesitas permisos para continuar <a href="/login" class="alert-link">Loguearme.</a>. Give it a click if you like.
-          </div>
       <div class="row">
         <div class="col-md-4 login-sec">
           <h2 class="text-center">Login </h2>
